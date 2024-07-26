@@ -1,0 +1,20 @@
+plugins {
+    id("java")
+}
+
+group = "org.solanaleaderboard"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("redis.clients:jedis:4.0.0")
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
